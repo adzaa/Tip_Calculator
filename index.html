@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/custom.css" />
+    <link rel="stylesheet" href="style/index.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="images/logo.svg" alt="logo" />
+    </div>
+    <div class="calculator-box mt-5">
+      <div class="calculator col-6">
+        <div class="bill-input">
+          <div class="heading">
+            <label>Bill</label>
+            <p id="error">Can't be zero</p>
+          </div>
+          <div class="input-icon">
+            <input
+              id="bill-input"
+              name="number"
+              type="number"
+              placeholder="0"
+            />
+            <span><img src="images/icon-dollar.svg" alt="$" /></span>
+          </div>
+        </div>
+
+        <div class="tip-select mt-4 d-flex flex-column">
+          <label>Select Tip %</label>
+          <div class="row mt-2 d-flex justify-content-between">
+            <div class="col-4">
+              <p id="tip-percentage">5%</p>
+            </div>
+            <div class="col-4">
+              <p id="tip-percentage">10%</p>
+            </div>
+            <div class="col-4">
+              <p id="tip-percentage">15%</p>
+            </div>
+          </div>
+          <div class="row mt-2 d-flex justify-content-between">
+            <div class="col-4">
+              <p id="tip-percentage">25%</p>
+            </div>
+            <div class="col-4">
+              <p id="tip-percentage">50%</p>
+            </div>
+            <div class="col-4">
+              <input
+                type="number"
+                id="tip-percentage-custom"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="number-people-input mt-4">
+          <div
+            class="heading d-flex justify-content-between text-nowrap align-items-center"
+          >
+            <label>Number of People</label>
+            <p id="error">Can't be zero</p>
+          </div>
+          <div class="input-icon">
+            <input
+              name="number"
+              id="number-of-people"
+              type="number"
+              placeholder="0"
+            />
+            <span><img src="images/icon-person.svg" alt="icon" /></span>
+          </div>
+        </div>
+      </div>
+      <div class="result col-6">
+        <div class="result-box d-flex justify-content-between">
+          <div class="results">
+            <div class="tip-amount">
+              <div
+                class="row d-flex justify-content-between align-items-center"
+              >
+                <div class="col-6">
+                  <h6>Tip Amount</h6>
+                  <p>/ person</p>
+                </div>
+                <div class="col-6">
+                  <p id="tip-amount-result">$0.00</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="total mt-4">
+              <div class="row">
+                <div class="col-6">
+                  <h6>Total</h6>
+                  <p>/ person</p>
+                </div>
+                <div class="col-6"><p id="total-person">$0.00</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reset-btn">
+            <button id="reset" disabled>reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="abdulah-dzankic.netlify.app/">Abdulah Džankić</a>.
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script
+    src="https://kit.fontawesome.com/e6796e7b74.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="index.js"></script>
+</html>
